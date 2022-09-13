@@ -1,0 +1,65 @@
+
+{% extends '../base.html' %}
+{% load static %}
+{% block content %}
+ <div class="page-container">
+    <!-- HEADER DESKTOP-->
+    {%include '../userbar.html' %}
+    <!-- HEADER DESKTOP-->
+
+    <!-- MAIN CONTENT-->
+    <div class="main-content">
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="overview-wrap">
+                            <h2 class="title-1">Subject List</h2>
+                            <a class="au-btn au-btn-icon au-btn--blue" href="{% url 'subject_create' %}">
+                                <i class="zmdi zmdi-plus"></i>add</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- DATA TABLE-->
+                        <div class="table-responsive m-b-40">
+                            <table class="table table-borderless table-data3">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for subject in subjects %}
+                                    <tr>
+                                        <td>{{ subject.id }}</td>
+                                        <td>{{ subject.name }}</td>
+                                        <td>
+                                            <div class="table-data-feature">
+                                                <a class="item" data-toggle="tooltip" href="{% url 'subject_edit' pk=subject.id %}" data-placement="top" title="" data-original-title="Edit">
+                                                    <i class="zmdi zmdi-edit text-warning"></i>
+                                                </a>
+                                                <a class="item" data-toggle="tooltip" href="{% url 'subject_delete' pk=subject.id %}" data-placement="top" title="" data-original-title="Delete">
+                                                    <i class="zmdi zmdi-delete text-danger"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- END DATA TABLE-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MAIN CONTENT-->
+    <!-- END PAGE CONTAINER-->
+</div>
+{% endblock %}

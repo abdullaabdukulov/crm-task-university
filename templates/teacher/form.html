@@ -1,0 +1,75 @@
+
+{% extends '../base.html' %}
+{% load static %}
+{% block content %}
+ <div class="page-container">
+    <!-- HEADER DESKTOP-->
+    {%include '../userbar.html' %}
+    <!-- HEADER DESKTOP-->
+
+    <!-- MAIN CONTENT-->
+    <div class="main-content">
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="overview-wrap">
+                            <h2 class="title-1">Add Subject</h2>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Company</strong>
+                                <small> Form</small>
+                            </div>
+                            <div class="card-body card-block">
+                                <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label class=" form-control-label">First name</label>
+                                        {{ form.first_name}}
+                                    </div>
+                                 <div class="form-group">
+                                        <label class=" form-control-label">Last name</label>
+                                        {{ form.last_name}}
+                                    </div>
+                                 <div class="form-group">
+                                        <label class=" form-control-label">Age</label>
+                                        {{ form.age}}
+                                    </div>
+                                    <div class="form-group">
+                                        <label class=" form-control-label">Kafedra</label>
+                                        {{ form.kafedra}}
+                                    </div>
+                                  <div class="form-group">
+                                        <label class=" form-control-label">Subject</label>
+                                        {{ form.subject}}
+                                    </div>
+                                <div class="form-group">
+                                    <label class="form-check-label">Image</label>
+                                    {{ form.image }}
+                                </div>
+
+
+
+                                    {% if model %}
+                                    <button type="submit" class="btn btn-warning btn-md">Save</button>
+                                    {% else %}
+                                    <button type="submit" class="btn btn-success btn-md">Add</button>
+                                    {% endif %}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MAIN CONTENT-->
+    <!-- END PAGE CONTAINER-->
+</div>
+{% endblock %}
