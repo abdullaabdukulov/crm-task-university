@@ -3528,7 +3528,7 @@ var InteractiveDateComponent = /** @class */ (function (_super) {
     tslib_1.__extends(InteractiveDateComponent, _super);
     function InteractiveDateComponent(_view, _options) {
         var _this = _super.call(this, _view, _options) || this;
-        // self-crm_task_university, overridable by subclasses
+        // self-config, overridable by subclasses
         _this.segSelector = '.fc-event-container > *'; // what constitutes an event element?
         if (_this.dateSelectingClass) {
             _this.dateClicking = new _this.dateClickingClass(_this);

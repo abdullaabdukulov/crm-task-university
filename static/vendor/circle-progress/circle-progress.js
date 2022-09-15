@@ -98,7 +98,7 @@
     emptyFill: 'rgba(0, 0, 0, .1)',
 
     /**
-     * jQuery Animation crm_task_university.
+     * jQuery Animation config.
      * You can pass `false` to disable the animation.
      * @see http://api.jquery.com/animate/
      * @type {object|boolean}
@@ -150,7 +150,7 @@
     constructor: CircleProgress,
 
     /**
-     * Container element. Should be passed into constructor crm_task_university.
+     * Container element. Should be passed into constructor config.
      * @protected
      * @type {jQuery}
      */
