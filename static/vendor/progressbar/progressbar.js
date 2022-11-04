@@ -295,7 +295,7 @@ var Tweenable = (function () {
       return this;
     }
 
-    // Only set default config if no configuration has been set previously and
+    // Only set default crm_task_university if no configuration has been set previously and
     // none is provided now.
     if (opt_config !== undefined || !this._configured) {
       this.setConfig(opt_config);

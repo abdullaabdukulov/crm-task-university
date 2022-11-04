@@ -32,7 +32,7 @@ class Teacher(models.Model):
     last_name = models.CharField(max_length=100)
     age = models.IntegerField()
     kafedra = models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='adminapp.Kafedra')
-    subject = models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='adminapp.Subject')
+    subject = models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='adminapp.Faculty')
     image = models.ImageField(upload_to='teachers', null=False)
 
     def __str__(self):

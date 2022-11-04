@@ -255,12 +255,14 @@ def group_edit(request, pk):
     return render(request, 'group/form.html', ctx)
 
 
+@login_required_decorator
 def group_delete(request, pk):
     model = Group.objects.get(pk=pk)
     model.delete()
     return redirect('group_list')
 
 
+@login_required_decorator
 def group_list(request):
     groups = services.get_group()
     ctx = {
@@ -269,6 +271,7 @@ def group_list(request):
     return render(request, 'group/list.html', ctx)
 
 
+@login_required_decorator
 def student_create(request):
     model = Student()
     form = Student_Form(request.POST or None, request.FILES or None, instance=model)
@@ -281,6 +284,7 @@ def student_create(request):
     return render(request, 'student/form.html', ctx)
 
 
+@login_required_decorator
 def student_edit(request, pk):
     model = Student.objects.get(pk=pk)
     form = Student_Form(request.POST or None, request.FILES or None, instance=model)
@@ -293,12 +297,14 @@ def student_edit(request, pk):
     return render(request, 'student/form.html', ctx)
 
 
+@login_required_decorator
 def student_delete(request, pk):
     model = Student.objects.get(pk=pk)
     model.delete()
     return redirect('student_list')
 
 
+@login_required_decorator
 def student_list(request):
     students = services.get_student()
     ctx = {
