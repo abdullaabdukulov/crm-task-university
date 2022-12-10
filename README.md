@@ -51,8 +51,6 @@ $ python manage.py runserver
 ### The Core Team
 Abdukulov Abdulla
 
-<a href="https://medium.com/@abduqulovabdulla3108/my-vivino-2214a1c6347a">Blog post</a>
-
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span> <span><img src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' ><img src='https://logobank.uz:8005/media/logos_png/astrum-01.png' width='30x' ></span>
 
 
