@@ -1,6 +1,6 @@
 # Welcome to My University CRM system
 
-<a href="https://abdulladev.pythonanywhere.com/"><img width="2048" alt="image" src="https://user-images.githubusercontent.com/95611906/204078715-46d7bade-daec-49f0-82eb-555a3ed08413.png"></a>
+<a href="http://45.90.216.74:81/"><img width="2048" alt="image" src="https://user-images.githubusercontent.com/95611906/204078715-46d7bade-daec-49f0-82eb-555a3ed08413.png"></a>
 
 
 
@@ -55,9 +55,9 @@ Abdukulov Abdulla
 
 
 Login:<br>
-username: root<br>
-password: 2022
+username: admin<br>
+password: admin
 
 
 
-<h4><a href="https://abdulladev.pythonanywhere.com/">website link</a></h4>
+<h4><a href="http://45.90.216.74:81/">Demo Version</a></h4>
